@@ -1,0 +1,9 @@
+crewai==0.130.0
+crewai-tools==0.47.1
+langchain-groq
+fastapi
+uvicorn
+python-multipart
+PyPDF2
+sqlalchemy
+python-dotenv
