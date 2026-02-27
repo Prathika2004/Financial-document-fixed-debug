@@ -66,8 +66,12 @@ Processes a financial PDF document and returns a professional 3-stage analysis: 
   "analysis": "The analyst found revenue of $25.5B... Risks include an 89% drop in free cash flow... Rating: Hold."
 }
 ```
-🗄️ Database Integration
+---
+
+## 🗄️ Database Integration
+
 The system includes a persistent data layer for auditability:
-Engine: SQLAlchemy ORM
-Database: SQLite (financial_analysis.db)
-Functionality: Every analysis result, including the unique file ID, the user's query, and the AI's final report, is automatically saved to the database for future reference and history tracking.
+
+*   **Engine:** SQLAlchemy ORM
+*   **Database:** SQLite (`financial_analysis.db`)
+*   **Functionality:** Every analysis result, including the unique file ID, the user's query, and the AI's final report, is automatically saved to the database for future reference and history tracking.
