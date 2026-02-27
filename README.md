@@ -43,27 +43,31 @@ To start the FastAPI server, run the following command from the project root:
 ```bash
 python -m app.main
  ```
-📡 API Documentation
-POST /analyze
-Description:
-Processes a financial PDF document and returns a professional 3-stage analysis:
-Extraction (Financial metrics)
-Risk Assessment (Credit/Market risks)
-Investment Rating (Buy/Hold/Sell)
-Payload: multipart/form-data
-Field	Type	Description
-file	File (PDF)	The financial report (e.g., Tesla Q2 Update).
-query	string	(Optional) Specific question (e.g., "What is the Gross Margin?").
-Example Response:
-code
-JSON
+
+## 📡 API Documentation
+
+### **POST** `/analyze`
+
+**Description:**  
+Processes a financial PDF document and returns a professional 3-stage analysis: Extraction, Risk Assessment, and Investment Rating.
+
+**Payload:** `multipart/form-data`
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `file` | `File (PDF)` | The financial report (e.g., Tesla Q2 Update). |
+| `query` | `string` | (Optional) Specific question (e.g., "What is the Gross Margin?"). |
+
+**Example Response:**
+
+```json
 {
   "status": "success",
   "analysis": "The analyst found revenue of $25.5B... Risks include an 89% drop in free cash flow... Rating: Hold."
 }
+```
 🗄️ Database Integration
 The system includes a persistent data layer for auditability:
 Engine: SQLAlchemy ORM
 Database: SQLite (financial_analysis.db)
 Functionality: Every analysis result, including the unique file ID, the user's query, and the AI's final report, is automatically saved to the database for future reference and history tracking.
-
