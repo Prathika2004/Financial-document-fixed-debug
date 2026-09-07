@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from crewai import Agent
 from langchain_groq import ChatGroq
-from tools import FinancialDocumentTool
+from .tools import FinancialDocumentTool
 
 load_dotenv()
 

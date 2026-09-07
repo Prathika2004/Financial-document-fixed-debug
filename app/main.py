@@ -6,11 +6,11 @@ from sqlalchemy import create_engine, Column, String, Text
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 from crewai import Crew, Process
-from agents import financial_analyst, risk_assessor, investment_advisor
-from task import analyze_financial_document, risk_assessment, investment_recommendation
+from .agents import financial_analyst, risk_assessor, investment_advisor
+from .task import analyze_financial_document, risk_assessment, investment_recommendation
 
 # --- DATABASE SETUP ---
-DATABASE_URL = "sqlite:///./financial_debug.db"
+DATABASE_URL = "sqlite:///./financial_analysis.db"
 Base = declarative_base()
 
 class AnalysisResult(Base):

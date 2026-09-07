@@ -1,5 +1,5 @@
 from crewai import Task
-from agents import financial_analyst, risk_assessor, investment_advisor
+from .agents import financial_analyst, risk_assessor, investment_advisor
 
 # Task 1: Extraction based on user query
 analyze_financial_document = Task(
